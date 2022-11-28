@@ -54,3 +54,7 @@ public Return type methodName(String name, Date date){}
 **Util Methods**
 import java.util.Date;
 
+**hashmaps**
+import java.util.HashMap;
+HashMap<String, String> userMap = new HashMap<String, String>();
+
