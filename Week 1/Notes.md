@@ -8,7 +8,9 @@ void = makes it not need a return or it returns nothing
 **Java Typing**
 Java is a strongly Typed lang
 
-
+**Type Casting**
+Cant convert if it will make you lose data exp double int an int 
+implicent vs explicet 
 
 *** Data Types and Wrapper classes***
 String
@@ -16,6 +18,7 @@ int = Integer
 double = Double
 
 *** Array list***
+CANNOT USE PRIMITIVE DATA TYPES
 .size() = length 
 .add() = push()
 .get() = arr[]
