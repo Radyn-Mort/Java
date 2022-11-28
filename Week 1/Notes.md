@@ -15,6 +15,11 @@ String
 int = Integer
 double = Double
 
+*** Array list***
+.size() = length 
+.add() = push()
+.get() = arr[]
+
 **String.format**
 %s = string
 %d = integer
@@ -45,3 +50,4 @@ public Return type methodName(String name, Date date){}
 
 **Util Methods**
 import java.util.Date;
+
