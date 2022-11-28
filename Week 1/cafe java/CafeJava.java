@@ -9,7 +9,7 @@ public class CafeJava {
         
         // Menu variables (add yours below)
         double mochaPrice = 3.5;
-        double dripPrice = 5.5;
+        // double dripPrice = 5.5;
         double lattePrice = 7.1;
         double cappuccinoPrice= 4.4;
         // Customer name variables (add yours below)
@@ -21,7 +21,7 @@ public class CafeJava {
         // Order completions (add yours below)
         boolean isReadyOrder1 = false;
         boolean isReadyOrder2 = false;
-        boolean isReadyOrder3 = false;
+        // boolean isReadyOrder3 = false;
         boolean isReadyOrder4 = true;
         
         // APP INTERACTION SIMULATION (Add your code for the challenges below)
