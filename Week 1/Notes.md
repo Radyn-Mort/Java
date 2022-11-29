@@ -1,14 +1,12 @@
 # Java
+- **Java is a strongly Typed language**
 ## main
 - Entry point
-- Java must have a main method to run directly
-- public = makes the method/class accessible
-- static = makes it so you can use methods without creating and instance 
-- void = makes it not need a return or it returns nothing
-
-- **Java is a strongly Typed lang**
-
-## Type Casting
+- **Java** must have a main method to run directly
+- **public** makes the method/class accessible
+- **static**  makes it so you can use methods without creating and instance 
+- **void** makes it not need a return or it returns nothing
+# Type Casting
 - Cant convert if it will make you lose data
 ```java
 // This wont work
@@ -31,15 +29,15 @@ char a = 'a'
 String a = Character.toString(a); 
 ```
 
-## Data Types and Wrapper classes
-### Primitive 
+# Data Types and Wrapper classes
+## Primitive 
 ```java
 int = 0
 double = 1.1
 int[] = {1,3,5}
 char = 'a'
 ```
-### Wrapper Classes
+## Wrapper Classes
 ```java
 String ="Hello Reader"
 Integer = 1
@@ -63,27 +61,44 @@ HashMap<String, String> userMap = new HashMap<String, String>();
 ## .equals
 - Compares the value instead of the place in memory 
 
-## Classes
-- ClassName varName = new ClassName();
+# Classes
+- Creation ClassName varName = new ClassName();
 - varName.Notation to use methods 
+### creating class
+```java
+public class ClassName{
+    //method
+    public void helloWord(){
+        System.out.println("helloWord");
+}
+}
+```
+### Instantiating an instance of a class
+```java
+ClassName instance1 = new ClassName();
+//calling the method woth our new instance
+instance.helloWorld();
+```
 
-### Class Variables
-- Member variables - object attributes or fields that belong to a data type or class.
 
-- Local variables - variables within methods code blocks that are not member variables (these are the primary type of variable you have been using so far). You can think of them as more temporary, since they vanish when the method ends (goes out of scope or returns).
 
-- Parameter variables - those that are declared in your method signature (between the parentheses!) which are also temporary.
+## Class Variables
+- **Member Variables** - object attributes or fields that belong to a data type or class.
+
+- **Local Variables**- variables within methods code blocks that are not member variables (these are the primary type of variable you have been using so far). You can think of them as more temporary, since they vanish when the method ends (goes out of scope or returns).
+
+- **Parameter Variables** - those that are declared in your method signature (between the parentheses!) which are also temporary.
 Note: You will see member variables called members, attributes, instance variables, fields, and properties. These all refer to the same thing, but in Java they are typically referred to as member variables.
 
 ## Methods
-- Every method has the following parts: modifiers, return type, method name, and method body.
+- Every method has the following parts: ***modifiers***, ***return type***, ***method name*** , and ***method body***.
 ```java
 Modifiers ReturnType methodName(Type args){
     MethodBody
 }
 ```
 
-### Method Over Loading
+### Method Overloading
 - methods can have the same name as long as they have different args
 ```java
 public Return type methodName(String name){}
@@ -155,17 +170,17 @@ Modifier Static [ReturnType] methodName(){}
 - Breaking things down to an abstract point
 - Ex a developer could be broken down to a person 
 ### Inheritance 
-- Inheriting method and variables from a super class 
+- **Inheriting** method and variables from a super class 
 ### Encapsulation
 - **Encapsulation** is the mechanism that binds together code and the data it manipulates, and keeps both sade from outside interference and misuse.
 - in Java everything is Encapsulated
 - You can't create a method without a class
 - you can implement encapsulation with **Access Modifiers** 
 - **Simplified** encapsulation mean hiding data using getters and setters
-
 ### Polymorphism  
 - Method overloading 
-### Layout
+
+## Layout
 - **Attributes** should be private so they cant be modified directly
 - **Constructor** Should be named after class 
 ```java
