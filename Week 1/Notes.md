@@ -48,13 +48,18 @@ HashMap<String, String> userMap = new HashMap<String, String>();
 
 ## ArrayList
 - CANNOT USE PRIMITIVE DATA TYPES
-- .size() = length 
-- .add() = push()
-- .get() = arr[]
-
+```java
+ArrayList<Integer> myArray= new ArrayList<Integer>();
+//length of th array
+myArray.size();// = 0
+//myArray.push(1)
+myArray.add(1);
+//myArray[0]
+myArray.get(0); //=1
+```
 ## String.format
-- %s = string
-- %d = integer
+- %s = String
+- %d = int
 - %.2f = double with 2 decimal spots
 - %n = New line
 
@@ -88,7 +93,7 @@ instance.helloWorld();
 - **Local Variables**- variables within methods code blocks that are not member variables (these are the primary type of variable you have been using so far). You can think of them as more temporary, since they vanish when the method ends (goes out of scope or returns).
 
 - **Parameter Variables** - those that are declared in your method signature (between the parentheses!) which are also temporary.
-Note: You will see member variables called members, attributes, instance variables, fields, and properties. These all refer to the same thing, but in Java they are typically referred to as member variables.
+- **Note:** You will see member variables called members, attributes, instance variables, fields, and properties. These all refer to the same thing, but in Java they are typically referred to as member variables.
 
 ## Methods
 - Every method has the following parts: ***modifiers***, ***return type***, ***method name*** , and ***method body***.
@@ -152,14 +157,28 @@ createGreeting();
 ```
 - **Method Body** This is where the logic goes
 
-## Static 
+# Static
+- **Purpose** static variable are use to keep track of data that is tied to the class not a single instance of a class
 - **Static Modifier** tells us it is a class method and allows us to use it without instantiating an instance
-- **Static Attributes** are only initialized once and shared between all instances of the class 
+- **Static Attributes / Member variable** are only initialized once and shared between all instances of the class 
 - **Static Methods** can only access  other static methods and Variables.They can't use the this keyword  because they are not running on an instance 
-- When we create static variables, it is common practice to create static methods to access the said variables. Let's refactor the example above with static methods.
+- When we create static variables, it is common practice to create static methods to access the said variables.
+- most  Static variables are changed within the other methods of the class and don't need a setMethod
 ```java
-private static int numberOfPlayers =0;
-Modifier Static [ReturnType] methodName(){}
+public class Player{
+    private static int numberOfPlayers =0;
+    public Player(){
+        numberOfPlayers++;
+    }
+    public  Static int getNumberOfPlayers(){
+        return numberOfPlayers;
+    }
+
+}
+```
+- To call static methods we just use the class 
+```java
+Player.getNumberOfPlayers();
 ```
 # OOP
 
@@ -181,8 +200,10 @@ Modifier Static [ReturnType] methodName(){}
 - Method overloading 
 
 ## Layout
-- **Attributes** should be private so they cant be modified directly
+- **Attributes / Member Variable** should be private so they cant be modified directly
 - **Constructor** Should be named after class 
+- **Methods** outside of getters and setters that solve a problem
+- **Getters and Setters** should have them for each attribute
 ```java
 //Developer class 
 import java.util.ArrayList;
