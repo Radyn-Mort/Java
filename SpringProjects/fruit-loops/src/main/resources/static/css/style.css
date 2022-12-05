@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+table{
+	background-color: pink;
+	border: 1px solid pink;
+
+}
+
+
+th, td {
+  border-bottom: 1px solid white;
+  background-color:white;
+ padding:5px;
