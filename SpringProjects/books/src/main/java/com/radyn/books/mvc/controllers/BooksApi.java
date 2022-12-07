@@ -12,6 +12,7 @@ import com.radyn.books.mvc.models.Book;
 import com.radyn.books.mvc.services.BookService;
 @RestController
 public class BooksApi {
+	
 	 private final BookService bookService;
 	 public BooksApi(BookService bookService){
 	     this.bookService = bookService;
@@ -22,7 +23,13 @@ public class BooksApi {
 	 }
 	 
 	 @RequestMapping(value="/api/books", method=RequestMethod.POST)
-	 public Book create(@RequestParam(value="title") String title, @RequestParam(value="description") String desc, @RequestParam(value="language") String lang, @RequestParam(value="pages") Integer numOfPages) {
+	 public Book create(
+			 @RequestParam(value="title") String title,
+			 @RequestParam(value="description") String desc,
+			 @RequestParam(value="language") String lang,
+			 @RequestParam(value="pages") Integer numOfPages
+			 ) {
+		 
 	     Book book = new Book(title, desc, lang, numOfPages);
 	     return bookService.createBook(book);
 	 }
@@ -39,7 +46,9 @@ public class BooksApi {
 	    		@RequestParam(value="title") String title, 
 	    		@RequestParam(value="description") String desc, 
 	    		@RequestParam(value="language") String lang,
-	    		@RequestParam(value="pages") Integer numOfPages) {
+	    		@RequestParam(value="pages") Integer numOfPages
+	    		) {
+		 
 	        Book book = bookService.updateBook(id, title, desc, lang, numOfPages);
 	        return book;
 	    }

@@ -57,7 +57,31 @@ public class Book {
         this.numberOfPages = pages;
     }
     
-    // other getters and setters removed for brevity
+    public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+	public Integer getNumberOfPages() {
+		return numberOfPages;
+	}
+	public void setNumberOfPages(Integer numberOfPages) {
+		this.numberOfPages = numberOfPages;
+	}
+	// other getters and setters removed for brevity
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
