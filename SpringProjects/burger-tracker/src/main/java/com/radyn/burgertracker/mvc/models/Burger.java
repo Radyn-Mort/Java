@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -23,6 +24,13 @@ public class Burger {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	Long id;
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	@NotNull
 	@Size(min = 3, max = 20)
 	String name;
@@ -32,6 +40,7 @@ public class Burger {
 	String restaurantName;
 	@NotNull
 	@Min(0)
+	@Max(10)
 	int rating;
 	@NotNull
 	@Size(min = 5, max= 200)
