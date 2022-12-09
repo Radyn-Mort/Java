@@ -50,7 +50,6 @@ public class BurgerController {
 	@PutMapping("/edit/{id}")
 	public String editBurger(@Valid @ModelAttribute("burger") Burger burger,BindingResult result) {
 		if(result.hasErrors()) {
-
 			return "edit.jsp";
 		}
 		else {

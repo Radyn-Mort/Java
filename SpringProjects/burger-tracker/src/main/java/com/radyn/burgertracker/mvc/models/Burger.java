@@ -28,9 +28,6 @@ public class Burger {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 	@NotNull
 	@Size(min = 3, max = 20)
 	String name;
