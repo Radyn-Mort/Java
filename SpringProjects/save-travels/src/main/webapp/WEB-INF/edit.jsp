@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>Edit <c:out value="${expense.name }" /></h1>
-	<form:form action="/expense/edit/${expense.id}" method="post" modelAttribute="expense">
+	<form:form action="/expense/${expense.id}" method="post" modelAttribute="expense">
 	<input type="hidden" name="_method" value="put">
 	<div>
 	<form:label path="name">Name: </form:label>

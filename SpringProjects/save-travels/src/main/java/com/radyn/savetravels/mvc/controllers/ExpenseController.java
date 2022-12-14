@@ -54,7 +54,7 @@ public class ExpenseController {
 		model.addAttribute("expense", expenseService.getOne(id));
 		return "edit.jsp";
 	}
-	@PutMapping("/edit/{id}")
+	@PutMapping("/{id}")
 	public String editExpense(@Valid @ModelAttribute("expense")Expense expense,BindingResult result) {
 		if(result.hasErrors()) {
 			return "edit.jsp";

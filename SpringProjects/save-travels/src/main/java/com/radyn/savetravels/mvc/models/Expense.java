@@ -86,6 +86,10 @@ public class Expense {
 	 public Long getId() {
 		return id;
 	}
+	 
+	public void setId(Long id) {
+		this.id = id;
+	}
 	@PrePersist
 	    protected void onCreate(){
 	        this.createdAt = new Date();
